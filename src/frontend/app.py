@@ -28,7 +28,8 @@ if css_path.exists():
     with open(css_path) as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-API_URL = "http://127.0.0.1:8000/api"
+import os
+API_URL = os.getenv("API_URL", "http://127.0.0.1:8000/api")
 
 def get_prediction(cultivo, lat, lon, altitud, pendiente, lluvia):
     payload = {
