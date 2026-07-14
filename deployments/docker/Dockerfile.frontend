@@ -1,0 +1,15 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Streamlit requiere menos dependencias a nivel de SO, pero folium/plotly/pandas si
+COPY requirements.txt .
+RUN pip install --no-cache-dir streamlit folium streamlit-folium requests plotly pandas
+
+COPY . .
+
+# Exponer el puerto por defecto de Streamlit
+EXPOSE 8501
+
+# Arrancar la aplicación de Streamlit
+CMD ["streamlit", "run", "src/frontend/app.py", "--server.port=8501", "--server.address=0.0.0.0"]

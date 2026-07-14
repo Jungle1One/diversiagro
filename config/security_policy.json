@@ -1,0 +1,21 @@
+{
+  "api_security": {
+    "cors_allowed_origins": [
+      "http://localhost:8501",
+      "https://diversiagro-app.onrender.com",
+      "https://*.vercel.app"
+    ],
+    "allowed_methods": ["GET", "POST", "OPTIONS"],
+    "allowed_headers": ["Authorization", "Content-Type"]
+  },
+  "twilio_security": {
+    "validate_signature": true,
+    "allowed_twiml_apps": [
+      "<TWILIO_ACCOUNT_SID>"
+    ]
+  },
+  "data_privacy": {
+    "log_user_coordinates": false,
+    "store_audio_recordings": false
+  }
+}

@@ -1,0 +1,27 @@
+# Configuración Base del Sistema DiversIAgro
+system:
+  project_name: "DiversIAgro"
+  version: "1.1.0"
+  env: "production"
+
+paths:
+  data_raw: "data/raw/"
+  data_processed: "data/processed/"
+  models_dir: "models/"
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  endpoints:
+    predict: "/api/predict"
+    predict_coords: "/api/predict_from_coords"
+    twilio_voice: "/twilio/voice"
+
+external_services:
+  openmeteo_url: "https://api.open-meteo.com/v1/forecast"
+  soda_api_base: "https://www.datos.gov.co/resource/"
+
+# Límites de seguridad del procesamiento (para prevenir saturación del servidor)
+limits:
+  max_requests_per_minute: 120
+  timeout_twilio_ms: 10000  # 10 segundos máximo para evitar colgar la llamada

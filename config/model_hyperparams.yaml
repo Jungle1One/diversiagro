@@ -1,0 +1,25 @@
+# Hiperparámetros del Modelo Híbrido RFRK (Random Forest + Kriging)
+
+random_forest:
+  n_estimators: 200
+  max_depth: 15
+  min_samples_split: 5
+  min_samples_leaf: 2
+  random_state: 42
+  n_jobs: -1  # Utilizar todos los núcleos disponibles
+
+kriging:
+  variogram_model: "spherical"
+  nlags: 15
+  weight: true
+  enable_exact_kriging: false
+
+training:
+  test_size: 0.2
+  target_column: "aptitud"
+  feature_columns:
+    - "lat"
+    - "lon"
+    - "altitud"
+    - "pendiente"
+    - "lluvia"

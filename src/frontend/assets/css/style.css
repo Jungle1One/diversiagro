@@ -1,0 +1,95 @@
+/* src/web/style.css - Premium Glassmorphism Theme for Streamlit */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Base Typography & Background */
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif;
+}
+
+.stApp {
+    background: radial-gradient(circle at top left, #1a1a2e, #16213e, #0f3460);
+    color: #e0e0e0;
+}
+
+/* Sidebar styling */
+[data-testid="stSidebar"] {
+    background: rgba(15, 23, 42, 0.6) !important;
+    backdrop-filter: blur(12px) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+[data-testid="stSidebar"] .css-17lntkn {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* Glassmorphism Cards for containers and metrics */
+div[data-testid="metric-container"] {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+div[data-testid="metric-container"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(0, 168, 255, 0.2);
+    border-color: rgba(0, 168, 255, 0.4);
+}
+
+/* Titles and Headers */
+h1, h2, h3 {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.5px;
+}
+
+h1 {
+    background: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 10px;
+}
+
+/* Sliders */
+.stSlider div[data-baseweb="slider"] {
+    padding-top: 15px;
+}
+.stSlider .st-bp {
+    background: #00f2fe !important;
+}
+
+/* Buttons */
+.stButton > button {
+    background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+    color: white !important;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 242, 254, 0.5);
+}
+
+/* Expander */
+.streamlit-expanderHeader {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Dataframe/Tables */
+.stDataFrame {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}

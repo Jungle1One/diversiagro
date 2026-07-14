@@ -1,0 +1,28 @@
+FROM python:3.10-slim
+
+# Instalar dependencias del sistema operativo requeridas por GDAL/Rasterio/GeoPandas
+RUN apt-get update && apt-get install -y \
+    gdal-bin \
+    libgdal-dev \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# Configurar variables para compilar GDAL
+ENV CPLUS_INCLUDE_PATH=/usr/include/gdal
+ENV C_INCLUDE_PATH=/usr/include/gdal
+
+WORKDIR /app
+
+# Copiar requirements y cargar librerías
+# Asegurarse de que el requirements tenga fastapi, uvicorn, geopandas, rasterio, scikit-learn, pykrige, openmeteo-requests
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copiar el código fuente
+COPY . .
+
+# Exponer el puerto de FastAPI
+EXPOSE 8000
+
+# Arrancar Uvicorn
+CMD ["uvicorn", "src.backend.main:app", "--host", "0.0.0.0", "--port", "8000"]

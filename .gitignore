@@ -1,0 +1,39 @@
+# Ambientes Virtuales
+venv/
+.venv/
+env/
+.env
+.env-1
+.env-*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Archivos de SO
+.DS_Store
+Thumbs.db
+
+# Datos Pesados (Geográficos y Entrenamientos)
+data/raw/*
+data/processed/*
+!data/README.md
+
+# Modelos Pesados (Scikit-Learn, PyKrige)
+models/*.pkl
+models/*.joblib
+!models/ESTRUCTURA.md
+
+# Logs y Temporales
+*.log
+scratch/
+.system_generated/
+project-management/
