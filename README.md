@@ -52,15 +52,15 @@ DiversIAgro puede escalar a nivel nacional. Tiene el potencial de convertirse en
 
 Para ver y probar la solución funcionando en tiempo real a través de los siguientes accesos:
 
-**Aplicación Web / Producción:** [Visitar la solución en vivo](https://diversiagro-app.onrender.com) *(Reemplazar con tu enlace final)*
-**Documentación de la API:** [Explorar Swagger/Postman](https://diversiagro-api.onrender.com/docs) *(Reemplazar con tu enlace final)*
+**Aplicación Web / Producción:** [Visitar la solución en vivo](https://diversiagro-convocatoria26.streamlit.app/)
+**Documentación de la API:** [Explorar Swagger/Postman](https://diversiagro.jungleone.top/docs)
 
 ---
 
 ## Enlaces de acceso
 
-Enlaces de acceso para GitHub y GitLab:
+Enlaces de acceso para presentacion:
 
-*   [Descargar archivo original (.PPTX)](recursos/presentacion.pptx) — *Para abrir y editar en PowerPoint.*
-*   [Ver presentación en línea (.PDF)](recursos/presentacion.pdf) — *Abre el visor interactivo de GitHub o GitLab.*
-*   [Descarga directa (.PDF)](recursos/presentacion.pdf?raw=true&inline=false) — *Fuerza la descarga en ambas plataformas.*
+*   [Descargar archivo original (.PPTX)](resources/presentacion.pptx) — *Para abrir y editar en PowerPoint.*
+*   [Ver presentación en línea (.PDF)](resources/presentacion.pdf) — *Abre el visor interactivo de GitHub o GitLab.*
+*   [Descarga directa (.PDF)](resources/presentacion.pdf?raw=true&inline=false) — *Fuerza la descarga en ambas plataformas.*
