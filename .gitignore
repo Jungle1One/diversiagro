@@ -5,6 +5,7 @@ env/
 .env
 .env-1
 .env-*
+.devcontainer/
 
 # Python
 __pycache__/
